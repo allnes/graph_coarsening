@@ -101,9 +101,9 @@ def run_example(example_name = "main", args = []):
         return -1
     os.chdir(build_directories[compiler_name])
     if os.name == "posix":
-        command = "./samples/example_" + example_name + "/example_" + example_name
+        command = "./bin/example_" + example_name
     elif os.name == "nt":
-        command = "samples\\example_" + example_name + "\\example_" + example_name + ".exe"
+        command = "bin\\example_" + example_name + ".exe"
     for arg in args:
         command += " " + arg
     print(command)
